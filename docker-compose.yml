@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+  db:
+    container_name: postgres
+    image: postgres
+    restart: always
+    volumes:
+      - db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    env_file:
+      - .env
+
+  trading-robot:
+    container_name: trading-robot
+    build: ./trading-robot
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 8001:8001
+    env_file:
+      - .env
+
+  robot-api:
+    container_name: robot-api
+    build: ./robot-api
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+    env_file:
+      - .env
+
+  robot-interface:
+    container_name: robot-interface
+    build: ./robot-interface
+    restart: always
+    ports:
+      - 3000:3000
+
+volumes:
+  db:
+    driver: local

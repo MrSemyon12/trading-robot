@@ -1,0 +1,31 @@
+export const INDICATORS = [
+  { value: "none", label: "Выберите индикатор" },
+  { value: "ema", label: "Экспоненциальная скользящая средняя" },
+  { value: "atr", label: "Средний истинный диапазон" },
+  { value: "rsi", label: "Индекс относительной силы" },
+  { value: "stoch", label: "Стохастический осциллятор" },
+  { value: "roc", label: "Скорость изменений" },
+  { value: "mcd", label: "Cходимость скользящей средней" },
+];
+
+export const CURRENCIES = [
+  { value: "BBG0013HGFT4", label: "Доллар США" },
+  { value: "BBG0013HRTL0", label: "Китайский юань" },
+  { value: "BBG0013HJJ31", label: "Евро" },
+  //   { value: "BBG0013HQ524", label: "Японская иена" },
+  { value: "BBG0013J7V24", label: "Армянский драм" },
+  { value: "BBG0013HG026", label: "Казахстанский тенге" },
+  // { value: "BBG0013HQ5K4", label: "Швейцарский франк" },
+  // { value: "RUB000UTSTOM", label: "Российский рубль" },
+  // { value: "BBG0013J7Y00", label: "Киргизский сом" },
+  // { value: "BBG0013HQ310", label: "Узбекский сум" },
+  // { value: "BBG0013J11P1", label: "Таджикский сомони" },
+  { value: "BBG0013J12N1", label: "Турецкая лира" },
+  { value: "BBG00D87WQY7", label: "Белорусский рубль" },
+  // { value: "BBG0013HQ5F0", label: "Фунт стерлингов" },
+  { value: "BBG0013HSW87", label: "Гонконгский доллар" },
+  { value: "BBG000VJ5YR4", label: "Золото" },
+  { value: "BBG000VHQTD1", label: "Серебро" },
+  // { value: "BBG0013HLF18", label: "Южноафриканский рэнд" },
+  // { value: "BBG0013HJ924", label: "Дирхам ОАЭ" },
+];
